@@ -1,0 +1,10 @@
+The CSS property `calc()` is used to perform calculations on different CSS values, but sometimes it can lead to unexpected results if the operands are not properly formatted or if there are unit inconsistencies.
+
+For example, this code will not work as expected:
+```css
+div {
+  width: calc(50% + 100px);
+}
+```
+
+The `+` operator requires that both operands have the same unit.  Since `50%` is a percentage and `100px` is in pixels, this is incorrect. To fix this issue, ensure both operands have consistent units:
