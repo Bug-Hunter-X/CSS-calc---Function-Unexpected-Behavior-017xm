@@ -1,0 +1,22 @@
+To fix the `calc()` issue, ensure both operands have consistent units. You can convert the pixel value to a percentage or vice versa.  Here are two possible solutions:
+
+**Solution 1 (Converting pixels to percentage):**
+
+```css
+div {
+  width: calc(50% + 20%);
+}
+```
+
+This solution assumes that `100px` is approximately 20% of the parent container's width.
+
+**Solution 2 (Converting percentage to pixels):**
+
+This approach requires knowing the parent's width, which might not always be possible.  If you know the parent's width (let's assume it's 500px), you could do this:
+
+```css
+div {
+  width: calc(250px + 100px);
+}
+```
+This solution converts 50% (of 500px) to 250px.
